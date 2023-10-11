@@ -15,4 +15,6 @@ exit - for exit from the app""")
     elif order.lower() == "change":
         change.change()
         print("every thing has been changed")
+    else:
+        print("print correct value please")
 
