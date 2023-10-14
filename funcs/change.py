@@ -1,3 +1,6 @@
+from funcs import mu_key
+
+
 def change():
     import requests
     import inflect
@@ -7,7 +10,7 @@ def change():
     dest_domain = input("type your destination domain please: ")
     url = "https://napi.arvancloud.ir/cdn/4.0/domains/"
     headers = {
-        "Authorization": "apikey 899028ad-dc7a-5be2-b434-38b4632c47b9"
+        "Authorization": mu_key
     }
     params = {
         "search": " ",
