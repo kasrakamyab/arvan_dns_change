@@ -7,7 +7,7 @@ def change():
     dest_domain = input("type your destination domain please: ")
     url = "https://napi.arvancloud.ir/cdn/4.0/domains/"
     headers = {
-        "Authorization": "apikey 26f1e3f8-c225-5be9-be88-0633e4fa89a9"
+        "Authorization": "apikey 899028ad-dc7a-5be2-b434-38b4632c47b9"
     }
     params = {
         "search": " ",
@@ -40,7 +40,7 @@ def change():
                     "ip_filter_mode": val['ip_filter_mode']
                 }
                 post_url = url + "/" + val['id']
-                post_req = requests.post(post_url, json=a_obj, headers=headers)
+                post_req = requests.put(post_url, json=a_obj, headers=headers)
                 print(post_req.text)
             elif val["type"] == "cname":
                 cname_obj = {
@@ -57,7 +57,7 @@ def change():
                     "ip_filter_mode": val['ip_filter_mode']
                 }
                 post_url = url + "/" + val['id']
-                post_req = requests.post(post_url, json=cname_obj, headers=headers)
+                post_req = requests.put(post_url, json=cname_obj, headers=headers)
                 print(post_req.text)
             elif val["type"] == "aname":
                 aname_obj = {
@@ -74,7 +74,7 @@ def change():
                     "ip_filter_mode": val['ip_filter_mode']
                 }
                 post_url = url + "/" + val['id']
-                post_req = requests.post(post_url, json=aname_obj, headers=headers)
+                post_req = requests.put(post_url, json=aname_obj, headers=headers)
                 print(post_req.text)
             else:
                 print("there is sth wrong")

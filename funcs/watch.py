@@ -5,7 +5,7 @@ def watch():
     domain = input("type your domain: ")
     url = "https://napi.arvancloud.ir/cdn/4.0/domains/"
     headers = {
-        "Authorization": "apikey 26f1e3f8-c225-5be9-be88-0633e4fa89a9"
+        "Authorization": "apikey 899028ad-dc7a-5be2-b434-38b4632c47b9"
     }
     params = {
         "search": " ",
@@ -29,4 +29,4 @@ def watch():
             print(f"port: {val['value'][0]['port']}")
 
         except KeyError:
-            pass
+            continue

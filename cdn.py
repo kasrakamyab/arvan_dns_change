@@ -1,4 +1,4 @@
-from funcs import watch,change
+from funcs import watch, change
 while True:
     print(""">please print
 watch - for only watching your dns records
@@ -17,4 +17,3 @@ exit - for exit from the app""")
         print("every thing has been changed")
     else:
         print("print correct value please")
-
